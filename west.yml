@@ -21,11 +21,13 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: silabs
       url-base: https://github.com/siliconlabssoftware
+    - name: gb-fork
+      url-base: https://github.com/glassboard-dev
 
   projects:
-    - name: zephyr
-      remote: silabs
-      revision: e71be929a2973ab4be23e43b4792ff2a89ac74f8
+    - name: zephyr-silabs
+      remote: gb-fork
+      revision: add-siwx917y-support
       import:
         # Simplicity SDK for Zephyr imports the Zephyr main tree at the
         # revision given above. Only the modules named below are imported.
@@ -42,8 +44,8 @@ manifest:
           - segger
           - zcbor
     - name: hal_silabs
-      remote: silabs
-      revision: 6bde23d62ffd16347d1696ba15db92b070907828
+      remote: gb-fork
+      revision: add-siwx917y-support
       path: modules/hal/silabs
     - name: mbedtls
       remote: silabs
